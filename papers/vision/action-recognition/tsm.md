@@ -12,6 +12,7 @@ https://arxiv.org/pdf/1811.08383.pdf
 	- at each time step, a channel will contain information from the previous frame, the current frame and the next frame
 - in online setting:
 	- at each time step, a channel will contain only information from the previous frame and the current frame as future frames cannot be shifted to the present
+ 
 ![](../../../images/Pasted%20image%204337229.png)
 - Fig 1: each frame/time-step is color coded, thus in (b), each time-step will have 3 colors representing information from 3 frames
 ![](../../../images/Pasted%20image%205228432.png)

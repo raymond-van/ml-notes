@@ -57,5 +57,6 @@ https://towardsdatascience.com/non-maximum-suppression-nms-93ce178e177c
 - also used as an evaluation metric for object detectors (evaluate diff between a proposal and the correct label)
 - High IoU = large overlap, max = 1?
 - simply a ratio
+
 ![](../../../images/Pasted%20image%2020221218113104.png)
 

@@ -17,6 +17,7 @@ https://arxiv.org/pdf/1703.06870.pdf
 	- Loss = L_classification + L_box + L_mask
 - Masks are extracted via FCN (fully convolutional + deconvs/upsampling for dense pixel-to-pixel correspondence) 
 	- requires RoIAlign
+ 
 ![](../../../images/Pasted%20image%2020221219185816.png)
 	
 ## RoIPool vs. RoIAlign
@@ -33,4 +34,5 @@ https://arxiv.org/pdf/1703.06870.pdf
 		- 
 - RoIAlign works by dividing the input RoI into a grid of smaller regions and sampling the feature map at the center point of each grid cell
 - allows for more accurate localization of objects in the image, as the feature map is not averaged or pooled over the entire RoI as it is in traditional object detection methods
+
 ![](../../../images/Pasted%20image%2020221219185331.png)

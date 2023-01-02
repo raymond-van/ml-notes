@@ -17,5 +17,6 @@ https://arxiv.org/pdf/1802.05365.pdf
 ## ELMo 
 - first compute context-independent word embedding x_k THEN pass it into LSTM layers of biLM
 - computes task-specific word representations by taking a linear combination of the intermediate layer-representations in the biLM (not just top layer like previous architectures)
+
 ![](../../images/Pasted%20image%2020221225132051.png)
 - To add ELMo to the task-specific supervised model, we first freeze the weights of the biLM and then concatenate the ELMo vector with the word-embedding and pass the ELMo enhanced representation  ([x_k; ELMo_k]) into the supervised model

@@ -38,4 +38,5 @@ https://arxiv.org/pdf/1707.06347.pdf
 	- S is an entropy bonus loss to ensure sufficient exploration
 ### Algorithm 
 - From PPO Remastered video
+
 ![](../../images/Pasted%20image%2020221229121548.png)

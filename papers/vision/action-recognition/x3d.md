@@ -18,6 +18,4 @@ https://arxiv.org/pdf/2004.04730.pdf
 ## X3D
 - requires to train 6 models, one for each expansion axis, until a desired complexity is reached, e.g. for 5 steps, it requires 30 models to be trained
 ### Progressive Network Expansion
-- 
-
-"The 2D base architecture is driven by the MobileNet core concept of channel-wise separable convolutions. Our expansion then progressively increases the computation (e.g., by 2×) by expanding only one axis at a time, train and validate the resultant architecture, and select the axis that achieves the best computation/accuracy trade-off. The process is repeated until the architecture reaches a desired computational budget. This can be interpreted as a form of coordinate descent in the hyper-parameter space defined by those axes."
+- "The 2D base architecture is driven by the MobileNet core concept of channel-wise separable convolutions. Our expansion then progressively increases the computation (e.g., by 2×) by expanding only one axis at a time, train and validate the resultant architecture, and select the axis that achieves the best computation/accuracy trade-off. The process is repeated until the architecture reaches a desired computational budget. This can be interpreted as a form of coordinate descent in the hyper-parameter space defined by those axes."

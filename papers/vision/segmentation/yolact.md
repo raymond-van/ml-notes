@@ -19,6 +19,7 @@ https://arxiv.org/pdf/1904.02689.pdf
 	- General
 		- the idea of generating prototypes and mask coefficients could be added to almost any modern object detector
 - sacrifices performance for speed
+
 ![](../../../images/Pasted%20image%2020221219205818.png)
 
 ![](../../../images/Pasted%20image%2020221219211526.png)
