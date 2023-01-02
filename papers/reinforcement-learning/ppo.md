@@ -26,8 +26,8 @@ https://arxiv.org/pdf/1707.06347.pdf
 	- PPO uses clipped probability ratios, which forms a pessimistic estimate (i.e., lower bound) of the performance of the policy
 
 ### Surrogate Objective
-![](../images/Pasted%20image%2020221229115050.png)
-![](../images/Pasted%20image%2020221229114948.png)
+![](../../images/Pasted%20image%2020221229115050.png)
+![](../../images/Pasted%20image%2020221229114948.png)
 ### Clipped Surrogate Objective (PPOv2)
 ![[Pasted image 20221229115005.png]]
 - by clipping the probability ratio, this removes the incentive for moving r_t outside of the interval [1 +/- eps]
