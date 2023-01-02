@@ -1,4 +1,5 @@
 Proximal Policy Optimization Algorithms (Schulman et al., 2017)
+
 https://arxiv.org/pdf/1707.06347.pdf
 
 #### Prereq: Policy Gradients
@@ -23,9 +24,9 @@ https://arxiv.org/pdf/1707.06347.pdf
 	- doesn't require second order optimizations
 - when making policy updates, we need to make sure the steps are not too large (or too small) since RL methods depend on the policy to collect more data, too large of a step can degrade the policy, which will degrade the data, resulting in a loop of poor performance
 	- PPO uses clipped probability ratios, which forms a pessimistic estimate (i.e., lower bound) of the performance of the policy
- 
+
 ### Surrogate Objective
-![[Pasted image 20221229115050.png]]
+![](../images/Pasted image 20221229115050.png)
 ![[Pasted image 20221229114948.png]]
 ### Clipped Surrogate Objective (PPOv2)
 ![[Pasted image 20221229115005.png]]
