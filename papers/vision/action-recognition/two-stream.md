@@ -1,4 +1,5 @@
 Two-Stream Convolutional Networks for Action Recognition in Videos (Simonyan et al., 2014)
+
 https://arxiv.org/pdf/1406.2199.pdf
 
 ## Summary
@@ -10,11 +11,11 @@ https://arxiv.org/pdf/1406.2199.pdf
 	- the human visual cortex contains two pathways: the ventral stream (which performs object recognition) and the dorsal stream (which recognises motion)
 - Decoupling the spatial and temporal nets ?allows to exploit the available images by pretraining spatial nets on the ImageNet challenge dataset, and explicitly handle motion information with optical flow algorithms for temporal nets
 
-![[Pasted image 2180445.png]]
+![](../../../images/Pasted%20image%202180445.png)
 
 
 ### Temporal Stream inputs
 - Optical flow stacking
 - Trajectory flow stacking
-![[Pasted image 2185927.png]]
+![](../../../images/Pasted%20image%202185927.png)
 - where d_t(u,v) is the displacement vector at the point (u, v) in frame t

@@ -1,4 +1,5 @@
 AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE (Google Brain, 2020)
+
 https://arxiv.org/pdf/2010.11929.pdf
 
 ## Summary
@@ -14,5 +15,5 @@ https://arxiv.org/pdf/2010.11929.pdf
 ## ViT
 - just Transformer but applied to patches of the image
 - linearly embed/projection = matmul
-![[Pasted image 20221222183029.png]]
+![](../../../images/Pasted%20image%2020221222183029.png)
 - prepend a learnable embedding to the sequence of embedded patches, whose state at the output of the Transformer encoder serves as the image representation y 

@@ -1,4 +1,5 @@
 Attention Is All You Need (Google Brain, 2017)
+
 https://arxiv.org/pdf/1706.03762.pdf
 
 #### Helpful links
@@ -16,7 +17,7 @@ https://arxiv.org/pdf/1706.03762.pdf
 
 ## Transformer
 - follows typical seq2seq architecture with encoder-decoder structure
-![[Pasted image 20221222160935.png]]
+![](../../images/Pasted%20image%2020221222160935.png)
 ### Encoder
 - stack of N = 6 identical layers, with each layer having 2 sub-layers
 - Sub-layer 1: Multi-head attention, residual connection, then layer-norm (LayerNorm(x + sublayer(x)))
@@ -33,19 +34,19 @@ https://arxiv.org/pdf/1706.03762.pdf
 		- this allows every position in the decoder to attend over all positions in the input sequence
 - output is computed as a weighted sum of the values, where the weight assigned to each value is computed by a compatibility function of the query with the corresponding key 
 - #### Scaled Dot-Product Attention
-![[Pasted image 20221222163444.png]]
+![](../../images/Pasted%20image%2020221222163444.png)
 - scaled by 1/sqrt(d_k) where d_k is the dimension of the key vector to prevent dot-products from growing too large, which in turn effects the gradients of the softmax
 - Have key-value pairs corresponding to position/idx in input sequence and the token/feature/value at that position
 - Dot product between query and key denotes which positions in the input sequence are necessary to answe the query
 	- orthogonal vector-pairs between query and key/position will give 0 whereas positions in input sequence that can be helpful in answering the query will be larger
 - Then we scale and put in softmax to give a distribution of the positions we neeed
 - Finally, extract those positions via a mat-mul with the values
-![[Pasted image 20221222162850.png]]
+![](../../images/Pasted%20image%2020221222162850.png)
 #### Multi-Head Attention
 - Instead of performing a single attention function with d_model-dimensional keys, values and queries, we found it beneficial to linearly project the queries, keys and values h times with different, learned linear projections to d_k, d_k and d_v dimensions, respectively. On each of these projected versions of queries, keys and values we then perform the attention function in parallel, yielding dv-dimensional output values. These are concatenated and once again projected, resulting in the final values
 	- Note: by linear projections they just mean a mat-mul via learned weight matrices
 - Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions
-![[Pasted image 20221222164929.png]]
+![](../../images/Pasted%20image%2020221222164929.png)
 ### Embeddings and Softmax
 - use learned embeddings to convert the input tokens and output tokens to vectors of dimension dmodel
 - use the usual learned linear transformation and softmax function to convert the decoder output to predicted next-token probabilities

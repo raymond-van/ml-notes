@@ -1,4 +1,5 @@
 ByteTrack: Multi-Object Tracking by Associating Every Detection Box (Zhang et al., 2022)
+
 https://arxiv.org/pdf/2110.06864.pdf
 
 ## Summary
@@ -7,7 +8,7 @@ https://arxiv.org/pdf/2110.06864.pdf
 - ByteTrack associates almost every detection box instead of only high score ones 
 	- for the low score detection boxes, we utilize their similarities with tracklets to recover true objects and filter out the background detections
 
-![[Pasted image 20221221163841.png]]
+![](../../../images/Pasted%20image%2020221221163841.png)
 - Figure 2: if we take every detection box into consideration, more false positives will be introduced immediately, e.g., the most right box in frame t3
 	- use similarities with tracklets to distinguish between objects and background
 	 - As shown in Figure 2 (c), two low score detection boxes are matched to the tracklets by the motion model’s predicted boxes, and thus the objects are correctly recovered. At the same time, the background box is removed since it has no matched tracklet

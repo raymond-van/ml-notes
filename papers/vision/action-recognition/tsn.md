@@ -1,4 +1,5 @@
 Temporal Segment Networks for Action Recognition in Videos (Wang et al., 2017)
+
 https://arxiv.org/pdf/1705.02953.pdf
 
 ## Summary
@@ -22,7 +23,7 @@ https://arxiv.org/pdf/1705.02953.pdf
 3. a segmental consensus function is applied to aggregate information from all sampled snippets 
 	- e.g. max pooling, average pooling, weighted average
 - computational cost is independent of video duration
-![[Pasted image 3193613.png]]
+![](../../../images/Pasted%20image%203193613.png)
 ### Handling untrimmed videos
 - use a hierarchical aggregating strategy named Multi-scale Temporal Window Integration (M-TWI) to yield a prediction result for untrimmed videos
 1. again, divide video into short windows of fixed duration
@@ -34,7 +35,7 @@ https://arxiv.org/pdf/1705.02953.pdf
 1. propose a cross-modality initialization strategy to transfer the learned representations from RGB modality to other modalities like optical flow and RGB difference
 2. develop a principled method to perform Batch Normalization (BN) in a fine-tuning scenario, denoted as partial BN, where only the mean and variance of first BN layer are updated adaptively to handle domain shift
 
-![[Pasted image 3195148.png]]
+![](../../../images/Pasted%20image%203195148.png)
 
 ##### RGB Differences
 - experimented as input to CNN

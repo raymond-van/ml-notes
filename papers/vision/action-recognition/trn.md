@@ -1,4 +1,5 @@
 Temporal Relational Reasoning in Videos (Zhou et al., 2018)
+
 https://arxiv.org/pdf/1711.08496.pdf
 
 ## Summary
@@ -13,10 +14,9 @@ https://arxiv.org/pdf/1711.08496.pdf
 - sparsely samples individual frames and then learns their causal relations, which is much more efficient than sampling dense frames and convolving them
 	- existing CNN architectures use dense sequence of frames as input, however there is a lot of redundancy in consecutive frames -> makes more sense to sparsely sample
 - can efficiently capture temporal relations at multiple time scales and outperform dense frame-based networks using only sparsely sampled video frames
-![[Pasted image 8829068.png]]
+![](../../../images/Pasted%20image%208829068.png)
 
 Two-frame Temporal Relation
-![[Pasted image 1947041.png]]
-
+![](../../../images/Pasted%20image%201947041.png)
 Multi-scale temporal relation
-![[Pasted image 1247443.png]]
+![](../../../images/Pasted%20image%201247443.png)

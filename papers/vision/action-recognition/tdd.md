@@ -1,4 +1,5 @@
 Action Recognition with Trajectory-Pooled Deep-Convolutional Descriptors (Wang et al., 2015)
+
 https://arxiv.org/pdf/1505.04868.pdf
 
 ## Summary
@@ -8,7 +9,7 @@ https://arxiv.org/pdf/1505.04868.pdf
 	- global vector is passed into a linear SVM for classification
 - flaw of local hand-crafted features is that they lack semantics and discriminative capacity (img classification...) -> thus use two-stream CNN to learn these features
 
-![[Pasted image 13112618.png]]
+![](../../../images/Pasted%20image%2013112618.png)
 - Note: inputs in conv nets (right) have multiple scales, input to spatial net is still a single frame (multiple res/scale) and input to temporal net is still a 3d volume optical flow field at multiple scales
 
 ### Architecture 
@@ -29,8 +30,7 @@ https://arxiv.org/pdf/1505.04868.pdf
 	- make sure that the feature value of each pixel range in the same interval, and let each pixel make the equal contribution in the final representation
 #### Trajectory pooling
 - Sum-pooling of the normalized feature maps over the 3D volume centered at the trajectory as follows
-![[Pasted image 3154652.png]]
-
+![](../../../images/Pasted%20image%203154652.png)
 
 ##### Warped optical flow field
 - Removes the camera motion from optical flow field? and keeps the optical flow for the motion we care about 

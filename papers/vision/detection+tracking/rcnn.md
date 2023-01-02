@@ -1,4 +1,5 @@
 Rich feature hierarchies for accurate object detection and semantic segmentation (Girshick et al., 2013)
+
 https://arxiv.org/pdf/1311.2524.pdf
 
 ## Summary
@@ -15,7 +16,7 @@ https://arxiv.org/pdf/1311.2524.pdf
 	- R-CNN adopts a "recognition using regions" approach
 - R-CNN mainly plays as a classifier, and it does not predict object bounds (except for refining by bounding box regression). Its accuracy depends on the performance of the region proposal module
 ## R-CNN (Region)
-![[Pasted image 2819432.png]]
+![](../../../images/Pasted%20image%202819432.png)
 - generates around 2000 category-independent region proposals for the input image, extracts a fixed-length feature vector from each proposal using a CNN, and then classifies each region with category-specific linear SVMs
 - use a simple technique (affine image warping) to compute a fixed-size CNN input from each region proposal, regardless of the region’s shape
 - is very slow, test-time detection takes 47s per image for VGG16
@@ -41,7 +42,7 @@ https://arxiv.org/pdf/1311.2524.pdf
 - objective is to find a hyperplane (decision boundary) in n-dim space that distinctly classify the data points
 - objective is to find the hyperplane that has the maximum margin/distance between data points of both classes
 - Maximizing the margin distance provides some reinforcement so that future data points can be classified with more confidence
-![[Pasted image 20221218112950.png]]
+![](../../../images/Pasted%20image%2020221218112950.png)
 
 ## NMS
 https://towardsdatascience.com/non-maximum-suppression-nms-93ce178e177c
@@ -49,12 +50,12 @@ https://towardsdatascience.com/non-maximum-suppression-nms-93ce178e177c
 - Neighbourhood windows have similar scores
 - Non-maximum Suppression is used to filter the proposals based on a criteria
 - solves multiple counting of the same object by removing the box with the lower confidence probability when the IoU between 2 boxes with the same label is above some threshold
-![[Pasted image 20221218113042.png]]
-![[Pasted image 20221218173549.png]]
+![](../../../images/Pasted%20image%2020221218113042.png)
+![](../../../images/Pasted%20image%2020221218173549.png)
 ### Intersection-over-Union (IoU)
 - measures amount of overlap between two proposals
 - also used as an evaluation metric for object detectors (evaluate diff between a proposal and the correct label)
 - High IoU = large overlap, max = 1?
 - simply a ratio
-![[Pasted image 20221218113104.png]]
+![](../../../images/Pasted%20image%2020221218113104.png)
 

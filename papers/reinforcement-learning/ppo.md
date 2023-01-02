@@ -1,4 +1,5 @@
 Proximal Policy Optimization Algorithms (Schulman et al., 2017)
+
 https://arxiv.org/pdf/1707.06347.pdf
 
 #### Prereq: Policy Gradients
@@ -16,7 +17,7 @@ https://arxiv.org/pdf/1707.06347.pdf
 ## Summary
 - improvement over TRPO
 	- replaces explicit KL constraint by subtracting a penalty on the surrogate loss (PPOv1)
-	 ![[Pasted image 20221229113922.png]]
+	 ![](../../images/Pasted%20image%2020221229113922.png)
 		 - penalty coeff B is adaptive (Abbeel PPO lecture explains it well)
 		 - not PPOv2 (below), but this penalty can be used alongside PPOv2
 	- compatible with architectures that include noise (such as dropout) or parameter sharing (between the policy/actor and value/critic function)
@@ -25,15 +26,16 @@ https://arxiv.org/pdf/1707.06347.pdf
 	- PPO uses clipped probability ratios, which forms a pessimistic estimate (i.e., lower bound) of the performance of the policy
  
 ### Surrogate Objective
-![[Pasted image 20221229115050.png]]
-![[Pasted image 20221229114948.png]]
+
+![](../../images/Pasted%20image%2020221229115050.png)
+![](../../images/Pasted%20image%2020221229114948.png)
 ### Clipped Surrogate Objective (PPOv2)
-![[Pasted image 20221229115005.png]]
+![](../../images/Pasted%20image%2020221229115005.png)
 - by clipping the probability ratio, this removes the incentive for moving r_t outside of the interval [1 +/- eps]
 	- acts as a KL constraint by keeping theta close to theta_old
  - For architectures that involve a critic (advantage/value function) that share parameters with the policy, we can define another loss function that combines the policy loss with the critic loss
- ![[Pasted image 20221229121448.png]]
+ ![](Pasted%20image%2020221229121448.png)
 	- S is an entropy bonus loss to ensure sufficient exploration
 ### Algorithm 
 - From PPO Remastered video
-![[Pasted image 20221229121548.png]]
+![](../../images/Pasted%20image%2020221229121548.png)

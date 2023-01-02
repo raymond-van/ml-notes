@@ -1,4 +1,5 @@
 YOLACT Real-time Instance Segmentation (Bolya et al., 2019)
+
 https://arxiv.org/pdf/1904.02689.pdf
 
 ## Summary
@@ -18,9 +19,9 @@ https://arxiv.org/pdf/1904.02689.pdf
 	- General
 		- the idea of generating prototypes and mask coefficients could be added to almost any modern object detector
 - sacrifices performance for speed
-![[Pasted image 20221219205818.png]]G
+![](../../../images/Pasted%20image%2020221219205818.png)
 
-![[Pasted image 20221219211526.png]]
+![](../../../images/Pasted%20image%2020221219211526.png)
 - Figure 2: in prototype masks, we can see that the first 3 masks highlight the person and the last mask highlights the racket, then we take a linear combination of these masks to do instance segmentation
 
 ## YOLACT
@@ -33,13 +34,13 @@ https://arxiv.org/pdf/1904.02689.pdf
 	- also uses FPN (pyramid Fig 3)
 - attached to a backbone feature layer (Fig 2) eg. resnet
 - no prototype loss, loss comes from final mask after assembly
-![[Pasted image 20221219213246.png]]
+![](../../../images/Pasted%20image%2020221219213246.png)
 ### Mask Coefficients
 - adds an extra head to the object detection branch to predict a vector of k “mask coefficients” (1 coefficient for each prototype) for each anchor that encode an instance’s representation in the prototype space
 	- in total, all 3 heads produce 4 + c + k coeffients per anchor 
 	- 4 -> bounding box coords, c -> classes, k -> prototypes
 - use tanh as nonlinearity for mask coefficients to allow us to subtract a prototypes from mask
-![[Pasted image 20221219213301.png]]
+![](../../../images/Pasted%20image%2020221219213301.png)
 ### Assembly
 - for each instance that survives NMS, we construct a mask for that instance by linearly combining the work of these two branches
 - assembly step is very lightweight (only a linear combination) and can be implemented as one GPU-accelerated mat-mul compsed with sigmoid

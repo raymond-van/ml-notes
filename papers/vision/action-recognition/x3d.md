@@ -1,4 +1,5 @@
 X3D: Expanding Architectures for Efficient Video Recognition (Feichtenhofer, 2020)
+
 https://arxiv.org/pdf/2004.04730.pdf
 
 ## Summary
@@ -12,7 +13,7 @@ https://arxiv.org/pdf/2004.04730.pdf
 - Produced a sequence of spatiotemporal architectures, covering a wide range of computation/accuracy trade-offs that can be used under different computational budgets
 - SOTA performance with 5x less multiply-adds and parameters
 
-![[Pasted image 5917432.png]]
+![](../../../images/Pasted%20image%205917432.png)
 
 ## X3D
 - requires to train 6 models, one for each expansion axis, until a desired complexity is reached, e.g. for 5 steps, it requires 30 models to be trained

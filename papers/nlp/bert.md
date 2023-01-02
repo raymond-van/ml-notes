@@ -1,5 +1,6 @@
 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (Devlin et al., 2018)
-- https://arxiv.org/pdf/1810.04805.pdf
+
+https://arxiv.org/pdf/1810.04805.pdf
 
 Note: "Bidirectional Transformer" = "Transformer Encoder" and Left-context-only (Autoregressive) Transformer = "Transformer Decoder" (seen in GPT, can only attend to tokens on left and only be used for text generation, can't fill in blanks (MLM))
 - OG Transformer is an Encoder-Decoder architecture because one of the attention layers takes as input, vectors from encoder as well as from the previous layer in decoder
@@ -25,10 +26,10 @@ Note: "Bidirectional Transformer" = "Transformer Encoder" and Left-context-only 
 	 - thus has both word
  
 ## BERT
-![[Pasted image 20221225194032.png]]
+![](../../images/Pasted%20image%2020221225194032.png)
 - minimal difference between pretrained architecture and downstream architectures
 ### Input representation
-![[Pasted image 20221225201717.png]]
+![](../../images/Pasted%20image%2020221225201717.png)
 - Token embeddings are WordPiece embeddings
 - Segmentation embeddings indicate if a token belongs to sentence A vs sentence B
 - Position embeddings are the embeddings needed for transformer architectures

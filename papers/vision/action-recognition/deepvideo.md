@@ -1,4 +1,5 @@
 Large-scale Video Classification with Convolutional Neural Networks (Karpathy et al., 2013)
+
 https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42455.pdf
 
 ## Summary
@@ -17,7 +18,8 @@ https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/
 		- each column in early conv layers gets 4 frames w/ overlapping for a total of 10 frames
 		- higher conv layers slowly get progressively more information with the upmost conv layers having information from all 10 frames
 		
-![[Pasted image 2009232.png]]
+![](../../../images/Pasted%20image%202009232.png)
 
 ## Results
-- only modest improvements over single-frame cnn ![[Pasted image 7701756.png]]
+- only modest improvements over single-frame cnn 
+![](../../../images/Pasted%20image%207701756.png)

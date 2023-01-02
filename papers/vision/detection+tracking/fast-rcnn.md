@@ -1,4 +1,5 @@
 Fast R-CNN (Girshick, 2015)
+
 https://arxiv.org/pdf/1504.08083.pdf
 
 ## Summary
@@ -14,7 +15,7 @@ https://arxiv.org/pdf/1504.08083.pdf
 	- but is also a multi-stage pipeline
 	
 ## Fast R-CNN
-![[Pasted image 20221218120344.png]]
+![](../../../images/Pasted%20image%2020221218120344.png)
 - takes as input an entire image and a set of object proposals
 	- thus you still need to do some pre object-proposal computation
 - The network first processes the whole image with several convolutional (conv) and max pooling layers to produce a conv feature map. Then, for each object proposal a region of interest (RoI) pooling layer extracts a fixed-length feature vector from the feature map. Each feature vector is fed into a sequence of fully connected (fc) layers that finally branch into two sibling output layers: one that produces softmax probability estimates over K object classes plus a catch-all “background” class and another layer that outputs four real-valued numbers for each of the K object classes. Each set of 4 values encodes refined bounding-box positions for one of the K classes
@@ -25,4 +26,4 @@ https://arxiv.org/pdf/1504.08083.pdf
 	- RoI pooling layer uses max pooling to convert the features inside any valid region of interest into a small feature map with a fixed spatial extent of H × W (e.g., 7 × 7), where H and W are layer hyper-parameters that are independent of any particular RoI
 - RoIs from the same image share computation and memory in the forward and backward passes
 ### Multi-task Loss
-![[Pasted image 20221218124601.png]]
+![](../../../images/Pasted%20image%2020221218124601.png)

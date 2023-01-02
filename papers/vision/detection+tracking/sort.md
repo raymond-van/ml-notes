@@ -1,4 +1,5 @@
 SIMPLE ONLINE AND REALTIME TRACKING (Bewley et al., 2016)
+
 https://arxiv.org/pdf/1602.00763.pdf
 
 ## Summary
@@ -16,7 +17,7 @@ https://arxiv.org/pdf/1602.00763.pdf
 - used to propogate a target’s identity into the next frame
 - approximate the frame-to-frame displacements of each object with a linear constant velocity model (assume object is moving w/ constant velocity) which is independent of other objects and camera motion
 - state of each target is modelled as: 
-	- ![[Pasted image 20221220172732.png]]
+	- ![](../../../images/Pasted%20image%2020221220172732.png)
 	 - where dots represent velocities
 	- Kalman filter takes in the bounding box coordinates as direct observations of the object state and velocities are estimated
 ### Data Association
@@ -39,7 +40,7 @@ https://arxiv.org/pdf/1602.00763.pdf
 	- where KG = Err_est / (Err_est + err_data),       0 <= KG <= 1
 		- KG close to 1 means measured data is accurate, kalman estimates are bad
 		- KG close to 0 means kalman estimates are good, measured data is bad, thus make new estimate similar to old estimate
-![[Pasted image 20221220190925.png]]
+![](../../../images/Pasted%20image%2020221220190925.png)
 
 ## Hungarian method
 - https://www.youtube.com/watch?v=dQDZNHwuuOY
