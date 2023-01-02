@@ -33,7 +33,7 @@ https://arxiv.org/pdf/1707.06347.pdf
 - by clipping the probability ratio, this removes the incentive for moving r_t outside of the interval [1 +/- eps]
 	- acts as a KL constraint by keeping theta close to theta_old
  - For architectures that involve a critic (advantage/value function) that share parameters with the policy, we can define another loss function that combines the policy loss with the critic loss
- ![[Pasted image 20221229121448.png]]
+ ![](Pasted%20image%2020221229121448.png)
 	- S is an entropy bonus loss to ensure sufficient exploration
 ### Algorithm 
 - From PPO Remastered video
