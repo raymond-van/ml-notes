@@ -1,3 +1,7 @@
+#### Helpful links
+- https://github.com/karpathy/nanoGPT/
+- https://jalammar.github.io/illustrated-gpt2/
+
 # GPT-1
 Improving Language Understanding by Generative Pre-Training (OpenAI, 2018)
 

@@ -6,6 +6,8 @@ Note: "Bidirectional Transformer" = "Transformer Encoder" and Left-context-only 
 - OG Transformer is an Encoder-Decoder architecture because one of the attention layers takes as input, vectors from encoder as well as from the previous layer in decoder
 - https://ai.stackexchange.com/questions/27038/why-does-gpt-2-exclude-the-transformer-encoder#:~:text=2-,GPT%2D2%20does%20not%20require%20the%20encoder%20part%20of%20the,representation%20of%20the%20input%20sequence.
 	- "The cases when we use encoder-decoder architectures are typically when we are mapping one type of sequence to another type of sequence, e.g. translating French to English or in the case of a chatbot taking a dialogue context and producing a response. In these cases, there are qualitative differences between the inputs and outputs so that it makes sense to use different weights for them"
+- Moreover, GPT is auto-regressive whereas BERT is not
+	- this is tradeoff, in losing auto-regression, BERT has the ability to incorporate the context on both sides of a words to fill in the blanks
 
 ## Summary
 - BERT = Bidirectional Encoder Representations from Transformers
