@@ -1,4 +1,4 @@
-Pasted image 20230118190507.pnghttps://github.com/google-research/tuning_playbook
+https://github.com/google-research/tuning_playbook
 
 ## Summary
 - First set up training pipeline + prediction 
